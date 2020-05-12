@@ -47,6 +47,6 @@ public class TaskController {
     @RequestMapping(method = RequestMethod.GET, value = "getOneTask")
     @ResponseBody
     public List<TaskDto> getOneTask(@RequestParam("id") long id){
-        return taskMapper.mapToTaskDtoList(service.getOne(id));
+        return taskMapper.mapToTaskDtoList(service.getOne(1L));
     }
 }
