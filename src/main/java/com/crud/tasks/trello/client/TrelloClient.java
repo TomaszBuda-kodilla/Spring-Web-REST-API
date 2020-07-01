@@ -26,7 +26,7 @@ public class TrelloClient {
     @Autowired
     private RestTemplate restTemplate;
 
-    public List<TrelloBoardDto> getTrelloBoards() {
+    private List<TrelloBoardDto> getTrelloBoards() {
         URI url = UriComponentsBuilder.fromHttpUrl(trelloApiEndpoint + "/members/leetdco2/boards")
                 .queryParam("key", trelloAppKey)
                 .queryParam("token", trelloToken)
@@ -38,5 +38,9 @@ public class TrelloClient {
             return Arrays.asList(boardsResponse);
         }
         return new ArrayList<>();
+    }
+
+    public List<TrelloBoardDto> trelloBoards(){
+        return getTrelloBoards();
     }
 }
