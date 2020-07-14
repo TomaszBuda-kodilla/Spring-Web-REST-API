@@ -6,11 +6,13 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @NoArgsConstructor
 @AllArgsConstructor
 @Getter
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class CreatedAttachments {
     @JsonProperty("trello")
-    private CreatedTrello trello;
+    private List<CreatedTrello> trello;
 }

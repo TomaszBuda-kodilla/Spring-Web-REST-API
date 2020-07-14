@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
@@ -16,5 +18,5 @@ public class CreatedBadges {
     private int votes;
 
     @JsonProperty("AttachmentsByType")
-    private CreatedAttachments createdAttachments;
+    private List<CreatedAttachments> createdAttachments;
 }
