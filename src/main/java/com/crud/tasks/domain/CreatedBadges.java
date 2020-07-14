@@ -18,5 +18,5 @@ public class CreatedBadges {
     private int votes;
 
     @JsonProperty("AttachmentsByType")
-    private List<CreatedAttachments> createdAttachments;
+    private CreatedAttachments createdAttachments;
 }
